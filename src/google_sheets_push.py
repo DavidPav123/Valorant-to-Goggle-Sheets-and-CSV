@@ -30,7 +30,7 @@ def update_sheet(values_to_update, range_to_update) -> None:
             creds.refresh(Request())
         else:
             flow: InstalledAppFlow = InstalledAppFlow.from_client_secrets_file(
-                "credentials.json", SCOPES
+                "src\credentials.json", SCOPES
             )
             creds = flow.run_local_server(port=0)
         # Save the credentials for the next run

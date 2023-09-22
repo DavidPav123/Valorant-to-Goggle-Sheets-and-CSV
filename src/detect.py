@@ -298,6 +298,6 @@ def read_images(file_path) -> List[List[str]]:
     return player_arr
 
 def export_to_csv(rows,file_name):
-    with open(f'CSVs/{file_name}', 'w') as f:
+    with open(f'src/CSVs/{file_name}', 'w') as f:
         write = csv.writer(f, delimiter=',', lineterminator="\n")
         write.writerows(rows)
