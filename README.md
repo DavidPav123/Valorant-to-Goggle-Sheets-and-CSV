@@ -5,5 +5,6 @@ Usage:
 1. Download the latest release of this project and unzip it.
 2. Download Tesseract OCR from the following link and install it on your computer, taking note of the location it is installed to: https://github.com/UB-Mannheim/tesseract/wiki.
 3. In the ***config.json*** file change the ***Spreadsheet ID*** parameter to your spreadsheets ID.
+3. In the ***config.json*** file change the ***Spreadsheet Pages*** parameter to the pages where the data should be uploaded.
 4. In the ***config.json*** file change the ***Tesseract OCR Path*** parameter to the location of Tesseract OCR noted earlier.
 5. To run the program put up to three screenshots of the Valorant end game screen in the ***screenshots*** folder and name them game1.png, game2.png, and game3.png. Run ***stats_to_GS.exe*** by double-clicking on it or through the terminal to if debug information is desired. The information extracted will be uploaded to the specified spreadsheet and exported to CSV files in the ***CSV*** folder.
