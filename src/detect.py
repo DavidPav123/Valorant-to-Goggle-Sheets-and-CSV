@@ -6,6 +6,14 @@ from glob import glob
 from os.path import splitext
 from PIL import Image
 from csv import writer
+from json import load
+
+def get_ocr_path():
+    with open("config.json", 'r') as file:
+        data = load(file)
+        return data.get("Tesseract OCR Path", None)
+
+path_to_tesseract = get_ocr_path()
 
 def create_images(file_path) -> None:
     im = Image.open(file_path)
@@ -212,7 +220,6 @@ def read_images(file_path):
     create_images(file_path)
 
     # Defining paths to tesseract.exe
-    path_to_tesseract: str = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
     pytesseract.pytesseract.tesseract_cmd = path_to_tesseract
 
     folders = glob("files/images/*")
