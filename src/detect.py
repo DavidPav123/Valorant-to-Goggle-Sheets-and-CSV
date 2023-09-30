@@ -297,6 +297,9 @@ def read_images(file_path):
     return player_arr
 
 def export_to_csv(rows,file_name):
+    for i in rows:
+        if i[1].lower() == "kayo":
+            i[1] = "KAY/O"
     with open(f'CSVs/{file_name}', 'w') as f:
         write = writer(f, delimiter=',', lineterminator="\n")
         write.writerows(rows)
