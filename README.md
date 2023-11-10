@@ -14,3 +14,4 @@
 - Non english characters will not be detected properly and will need to be manually inputted.
 - Characters may not be detected properly due to missing images or lack of image data.
 - If a CSV file is open when the program attemps to write to it, the program will crash.
+- - The token will need to be refreshed weekly or an error will occur and no data will be uploaded. This can be done by deleting the ***token.json*** file and going through the authentication process again.
